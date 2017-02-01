@@ -1,7 +1,7 @@
 version: '3'
 services:
   engine:
-    image: $RegistryUrl$/biglittlechallenge/trials-engine:$BuildNumber$
+    image: RegistryUrl/biglittlechallenge/trials-engine:BuildNumber
     ports:
       - "8080:8080"
     environment:
@@ -10,7 +10,7 @@ services:
       mode: replicated
       replicas: 1
   aiplayer:
-    image: $RegistryUrl$/biglittlechallenge/trials-ai:$BuildNumber$
+    image: RegistryUrl/biglittlechallenge/trials-ai:BuildNumber
     ports:
       - "8888"
     depends_on:
@@ -22,7 +22,7 @@ services:
         limits:
           cpus: '0.01'
   dashboard:
-    image: $RegistryUrl$/biglittlechallenge/trials-engine-dashboard:$BuildNumber$
+    image: RegistryUrl/biglittlechallenge/trials-engine-dashboard:BuildNumber
     ports: 
       - "8181:80"
     depends_on:
