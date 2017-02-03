@@ -1,7 +1,12 @@
 version: '3'
+networks:
+  trials:
+    driver: overlay
 services:
   engine:
     image: biglittlechallenge/trials-engine
+    networks:
+      - trials
     ports:
       - "8080:8080"
     environment:
@@ -11,6 +16,8 @@ services:
       replicas: 1
   aiplayer:
     image: biglittlechallenge/trials-ai
+    networks:
+      - trials
     ports:
       - "8888"
     depends_on:
@@ -23,6 +30,8 @@ services:
           cpus: '0.01'
   dashboard:
     image: biglittlechallenge/trials-engine-dashboard
+    networks:
+      - trials
     ports: 
       - "8181:80"
     depends_on:
