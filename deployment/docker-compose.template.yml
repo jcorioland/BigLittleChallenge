@@ -25,9 +25,6 @@ services:
     deploy:
       mode: replicated
       replicas: 2
-      resources:
-        limits:
-          cpus: '0.01'
   dashboard:
     image: RegistryUrl/biglittlechallenge/trials-engine-dashboard:BuildNumber
     networks:
