@@ -1,4 +1,4 @@
-5version: '3'
+version: '3'
 networks:
   trials:
     driver: overlay
