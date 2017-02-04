@@ -1,4 +1,4 @@
-version: '3'
+5version: '3'
 networks:
   trials:
     driver: overlay
@@ -24,7 +24,7 @@ services:
       - engine
     deploy:
       mode: replicated
-      replicas: 2
+      replicas: 5
   dashboard:
     image: RegistryUrl/biglittlechallenge/trials-engine-dashboard:BuildNumber
     networks:
