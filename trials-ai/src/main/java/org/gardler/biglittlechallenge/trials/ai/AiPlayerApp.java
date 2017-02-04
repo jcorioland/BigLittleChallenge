@@ -19,7 +19,7 @@ public class AiPlayerApp {
 	
 	
 	public static void main(String[] args) {
-		logger.info("Starting an AI Player Engine.");
+		logger.info("Starting an AI Player Engine, with default settings.");
 		int port;
 		if (args.length == 0) {
 			// TODO: There is still a chance of a port clash, should verify port
